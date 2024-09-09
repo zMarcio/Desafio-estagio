@@ -10,13 +10,7 @@ Ao final do processamento, qual será o valor da variável SOMA?
 
 **Solução:**
 
-indice = 13
-soma = 0
-k = 0
-for k in range(1, indice+1):
-    soma += k
-print(soma)
-
+[Desafio 01 link](https://github.com/zMarcio/Desafio-estagio/blob/master/desafio01.py)
 
 ### Desafio 2: Sequência de Fibonacci
 
@@ -26,20 +20,8 @@ Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor semp
 IMPORTANTE: Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
 
 **Solução:**
-´´´python
-def fibonacci(n):
-    a, b = 0, 1
-    while b < n:
-        a, b = b, a+b
-    return b == n
 
-"""True fibonacci sequence"""
-testing = fibonacci(13)
-"""False fibonacci sequence"""
-testing2 = fibonacci(14)
-
-print(testing)
-print(testing2)
+[Desafio 02 link](https://github.com/zMarcio/Desafio-estagio/blob/master/desafio02.py)
 
 ### Desafio 3: Calcular faturamento
 
@@ -56,23 +38,7 @@ b) Podem existir dias sem faturamento, como nos finais de semana e feriados. Est
 
 **Solução:**
 
-def calcFaturamento(faturamento: str):
-    with open(faturamento, "r") as teste:
-        dados = json.load(teste)
-    faturamento_diario = []
-    for chave, valor in dados.items():
-        if isinstance(valor, list):
-            faturamento_diario.extend(valor)
-
-    menor = min(faturamento_diario)
-    maior = max(faturamento_diario)
-    media = round(sum(faturamento_diario) / len(faturamento_diario), 2)
-    dias_acima_media = sum(valor > media for valor in faturamento_diario)
-
-
-    return f"menor: {menor}, maior: {maior}, media: {media} e dias acima da média: {dias_acima_media}"
-
-print(calcFaturamento("faturamento.json"))
+[Desafio 03 link](https://github.com/zMarcio/Desafio-estagio/blob/master/desafio03.py)
 
 ### Desafio 4: Calcular faturamento por estado
 
@@ -88,22 +54,8 @@ Escreva um programa na linguagem que desejar onde calcule o percentual de repres
 
 **Solução:**
 
+[Desafio 04 link](https://github.com/zMarcio/Desafio-estagio/blob/master/desafio04.py)
 
-def calc_faturamento(faturamento: dict):
-    total = sum(faturamento.values())
-    percentual = {estado: round((valor / total) * 100, 2) for estado,valor in faturamento.items()}
-    return percentual
-
-faturamento = {
-    "SP": 67836.43,
-    "RJ": 36678.66,
-    "MG": 29229.88,
-    "ES": 27165.48,
-    "Outros": 19849.53
-}
-
-print(calc_faturamento(faturamento))
-```markdown
 ### Desafio 5: Inverter String
 
 **Enunciado:**
@@ -114,26 +66,8 @@ a) Essa string pode ser informada através de qualquer entrada de sua preferênc
 b) Evite usar funções prontas, como, por exemplo, reverse;
 
 **Solução:**
-def inverte_no_dedo(string:str):
-    aux = ""
-    p = 1
-    k = 0
-    """
-    0(k) + 1(p) = 1 | len(string) - 1 = 5
-    1(k) + 1(p) = 2 | len(string) - 2 = 4
-    2(k) + 1(p) = 3 | len(string) - 3 = 3
 
-    """
-    for i in range(len(string)):
-        k += p
-        temp = len(string) - k
-        aux += string[temp]
-        p = 1
-
-    return aux
-
-print(inverte_string("string"))
-print(inverte_no_dedo("string"))
+[Desafio 05 link](https://github.com/zMarcio/Desafio-estagio/blob/master/desafio05.py)
 
 ## Observações
 
