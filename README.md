@@ -26,7 +26,7 @@ Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor semp
 IMPORTANTE: Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
 
 **Solução:**
-
+´´´python
 def fibonacci(n):
     a, b = 0, 1
     while b < n:
